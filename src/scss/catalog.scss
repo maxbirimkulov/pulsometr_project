@@ -1,0 +1,188 @@
+.catalog {
+  padding-bottom: 93px;
+
+  &__title {
+    font-family: var(--museo700);
+    text-align: center;
+    margin-bottom: 68px;
+    font-size: 38px;
+  }
+
+  &__content {
+    display: none;
+
+    &_active {
+      display: block;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    list-style-type: none;
+    margin-bottom: 72px;
+  }
+
+  &__tab {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid #D0D0D0;
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--museo500);
+    line-height: 50px;
+    transform: skew(-22deg);
+    color: #6B6B6B;
+
+    .skew-text {
+      transform: skew(22deg);
+
+    }
+
+    &_active, &:hover {
+      background-color: var(--red);
+      border: none;
+      color: white;
+    }
+
+  }
+
+  &__row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+    justify-content: center;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: 301px;
+  }
+
+  &__card {
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px;
+    border: 2px solid #E8E8E8;
+    overflow: hidden;
+
+  }
+
+  &__model {
+    width: 50%;
+    height: 333px;
+    padding-right: 10px;
+    position: relative;
+    transition: 0.3s;
+
+    &_active {
+      transform: translateX(-100%);
+    }
+
+    &-title {
+      font-family: var(--museo700);
+      font-size: 16px;
+      margin: 20px 0 16px;
+    }
+
+    &-subtitle {
+      text-align: center;
+      font-family: var(--museo500);
+      margin-bottom: 17px;
+      font-size: 14px;
+    }
+
+    &-link {
+      font-family: var(--museo500);
+      font-size: 14px;
+      color: var(--red);
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__buy {
+    border-top: 1px solid #E8E8E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 0;
+    margin-top: 18px;
+
+  }
+
+  &__price {
+    &-old {
+      font-family: var(--museo500);
+      font-size: 14px;
+      color: #555555;
+      text-align: left;
+    }
+
+    &-new {
+      font-family: var(--museo700);
+      font-size: 20px;
+      color: #050505;
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    @include buttons(132px, 41px, 14px)
+  }
+
+  &__more {
+    display: flex;
+    width: calc(200% + 40px);
+    height: 333px;
+  }
+
+  &__info {
+    max-height: 275px;
+    list-style-type: square;
+    color: var(--red);
+    overflow: auto;
+    z-index: 2;
+
+    &-list {
+      text-align: left;
+      font-family: var(--museo500);
+      font-size: 14px;
+      margin-bottom: 15px;
+      margin-left: 15px;
+
+      &-text {
+        color: #555555;
+      }
+    }
+  }
+
+  &__back-info {
+    text-align: center;
+    width: 50%;
+    position: relative;
+    padding-right: 20px;
+
+    &_active {
+      transform: translateX(-100%);
+      transition: 0.3s;
+    }
+
+    &-link {
+      font-family: var(--museo500);
+      font-size: 14px;
+      color: var(--red);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

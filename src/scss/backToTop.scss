@@ -1,0 +1,16 @@
+.backToTop{
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  z-index: 5;
+  text-decoration: none;
+  color: white;
+  width: 100px;
+  height: 30px;
+  background-color: var(--red);
+  line-height: 30px;
+  text-align: center;
+  font-family: var(--museo500);
+  border-radius: 5px;
+  display: none;
+}

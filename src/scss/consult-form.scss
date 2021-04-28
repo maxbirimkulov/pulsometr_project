@@ -1,0 +1,45 @@
+.consult-form{
+  display: flex;
+  flex-direction: column;
+  &__label{
+    position: relative;
+  }
+  &__input{
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    padding-left: 21px;
+    &:valid:not(:placeholder-shown){
+      border: 2px solid green;
+    }
+    &:invalid:not(:placeholder-shown){
+      border: 2px solid var(--red);
+    }
+    &:invalid:not(:placeholder-shown) + .consult-form__validation{
+      font-size: 16px;
+      border: 2px solid var(--red);
+      padding: 0 20px;
+    }
+    &::placeholder{
+      font-family: var(--museo500);
+      color: black;
+      font-size: 14px;
+    }
+  }
+  &__validation{
+    color: var(--red);
+    font-size: 0;
+    background-color: #fff;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    height: 40px;
+    line-height: 40px;
+  }
+  &__btn{
+    @include buttons(301px, 56px, 16px);
+  }
+}

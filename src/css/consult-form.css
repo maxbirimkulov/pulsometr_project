@@ -1,0 +1,1 @@
+.consult-form{display:flex;flex-direction:column}.consult-form__input{width:300px;height:50px;border-radius:5px;border:none;outline:none;margin-bottom:15px}.consult-form__input::placeholder{padding-left:21px;font-family:var(--museo500);color:black;font-size:14px}

@@ -1,0 +1,18 @@
+@mixin buttons($w, $h, $fs){
+  background-color: #C70101;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: MuseoSansCyrl-500, sans-serif;
+  width: $w;
+  height: $h;
+  font-size: $fs;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}

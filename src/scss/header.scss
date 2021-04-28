@@ -1,0 +1,55 @@
+.header {
+  margin-top: 21px;
+  width: 100%;
+  position: absolute;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__subtitle {
+    font-family: var(--museo700);
+    font-size: 13px;
+    text-align: center;
+    color: white;
+  }
+
+  &__title {
+    margin-top: 10px;
+    font-family: var(--museo700);
+    font-size: 18px;
+    text-align: center;
+    color: white;
+  }
+
+  &__number {
+    font-family: var(--museo700);
+    font-size: 18px;
+    text-align: right;
+    color: white;
+    margin-bottom: 7px;
+
+    &-tel {
+      color: white;
+      text-decoration: none;
+
+      &:active, &:hover {
+        color: #C70101;
+      }
+
+    }
+  }
+
+  &__btn {
+    @include buttons(151px, 31px, 12px);
+  }
+
+  &__right {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+}

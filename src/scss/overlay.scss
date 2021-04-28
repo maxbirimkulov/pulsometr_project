@@ -1,0 +1,109 @@
+@mixin close($rt) {
+  width: 100%;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate($rt);
+  background-color: var(--red);
+  height: 3px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #00000056;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+
+  .popup {
+    width: 100%;
+    max-width: 380px;
+    padding: 38px;
+    background-color: #F2F2F2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &__consultation {
+      display: none;
+
+      &-title {
+        font-family: var(--museo700);
+        color: #0D0D0D;
+        text-align: center;
+        font-size: 19px;
+      }
+
+      &-subtitle {
+        font-family: var(--museo500);
+        color: #0D0D0D;
+        text-align: center;
+        font-size: 14px;
+        margin: 10px 0 15px;
+      }
+    }
+
+    &__close {
+      width: 21px;
+      height: 21px;
+      position: absolute;
+      right: -41px;
+      cursor: pointer;
+      top: 0;
+
+      &::before {
+        @include close(-45deg)
+      }
+
+      &::after {
+        @include close(45deg)
+      }
+    }
+
+    &__buy {
+      display: none;
+
+      &-title {
+        font-family: var(--museo700);
+        color: #0D0D0D;
+        text-align: center;
+        font-size: 19px;
+      }
+
+      &-subtitle {
+        font-family: var(--museo500);
+        color: #0D0D0D;
+        text-align: center;
+        font-size: 14px;
+        margin: 10px 0 15px;
+      }
+    }
+
+    &__thanks {
+      display: none;
+      height: 100%;
+
+      &-title {
+        font-family: var(--museo700);
+        color: #0D0D0D;
+        text-align: center;
+        font-size: 19px;
+      }
+
+      &-subtitle {
+        font-family: var(--museo500);
+        color: #0D0D0D;
+        text-align: center;
+        font-size: 14px;
+        margin: 10px 0 15px;
+
+      }
+    }
+  }
+
+}
